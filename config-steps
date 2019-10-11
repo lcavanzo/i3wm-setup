@@ -1,0 +1,23 @@
+# install 
+  sudo dnf install -y i3 i3-ipc i3status i3lock dmenu terminator rofi playerctl feh lxappereance thunar arc-theme moka-icon-theme blueman
+
+# copy fonts to our local machine
+cp -a $I3WMdir/.fonts ~/.fonts
+
+# config file 
+vim .config/i3/config 
+
+# install i3blocks
+sudo dnf -y copr enable wyvie/i3blocks
+sudo dnf install i3blocks
+
+cp /etc/i3blocks.conf ~/.config/i3/
+# check class name, used for check programs class
+xprop 
+
+# set new fonts to gtk-3 apps
+vim .config/gtk-3.0/settings.ini
+
+# change <caps lock> key for <control> key
+vim /usr/share/X11/xkb/symbols/pc 
+
