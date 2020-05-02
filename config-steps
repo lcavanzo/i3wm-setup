@@ -21,3 +21,8 @@ vim .config/gtk-3.0/settings.ini
 # change <caps lock> key for <control> key
 vim /usr/share/X11/xkb/symbols/pc 
 
+## reverse scroll 
+##### http://unixnme.blogspot.com/2016/10/how-to-reverse-mouse-scroll-direction.html
+vim /usr/share/X11/xorg.conf.d/10-evdev.conf
+
+
