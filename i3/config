@@ -6,8 +6,8 @@ set $mod Mod4
 default_border normal
 
 # Print screen takes a screenshot
-bindsym Print           exec scrot '%Y-%m-%d_%H:%M:%S.png' -e 'mv $f ~/Pictures/'
-bindsym Shift+Print     --release exec scrot -s '%Y-%m-%d_%H:%M:%S.png' -e 'mv $f ~/Pictures/'
+#bindsym Print           exec scrot '%Y-%m-%d_%H:%M:%S.png' -e 'mv $f ~/Pictures/'
+bindsym Shift+Print     exec /usr/bin/flameshot gui -p  /home/lcavanzo/Pictures/
 
 # Hide borders
 #hide_edge_borders vertical
@@ -243,7 +243,7 @@ bindsym $mod+t exec thunar
 # finds out, if available)
 bar {
         
-    status_command i3blocks -c /home/cavanzo/.config/i3/i3blocks.conf
+    status_command i3blocks -c /home/lcavanzo/.config/i3/i3blocks.conf
     position top
     colors {
         background $bg-color-bar
@@ -275,7 +275,7 @@ bindsym XF86AudioPrev exec playerctl previous
 
 ## exec programs during the start
 #exec programs to start
-exec_always feh --bg-scale /home/cavanzo/Downloads/arch-wall.jpg
+exec_always feh --bg-scale /home/cavanzo/.config/i3/wallpaper.jpg
 
 ###########################
 #### keys combination #####
